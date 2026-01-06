@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TECHNOVA 2026 | Coordinators</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --neon:#00ffff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    font-family:Poppins,sans-serif;
+    background:radial-gradient(circle at top,#0f2027,#000);
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* GRID */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+      linear-gradient(rgba(0,255,255,.05) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(0,255,255,.05) 1px,transparent 1px);
+    background-size:60px 60px;
+    animation:grid 30s linear infinite;
+    z-index:-1;
+}
+@keyframes grid{to{transform:translate(-60px,-60px)}}
+
+/* HEADER */
+header{
+    padding:100px 8% 60px;
+    text-align:center;
+}
+header h1{
+    font-family:Orbitron;
+    font-size:3.2rem;
+    color:var(--neon);
+    text-shadow:0 0 25px var(--neon);
+}
+header p{
+    margin-top:10px;
+    color:#9ff;
+    letter-spacing:2px;
+}
+
+/* SECTION */
+section{
+    padding:80px 8%;
+}
+h2{
+    font-family:Orbitron;
+    color:var(--neon);
+    margin-bottom:40px;
+    text-align:center;
+}
+
+/* GRID */
+.coordinators{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:35px;
+}
+
+/* CARD */
+.card{
+    background:rgba(0,255,255,.05);
+    border:1px solid rgba(0,255,255,.35);
+    border-radius:18px;
+    padding:30px;
+    backdrop-filter:blur(14px);
+    box-shadow:0 0 20px rgba(0,255,255,.3);
+    transition:.4s;
+}
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 45px var(--neon);
+}
+.card h3{
+    font-family:Orbitron;
+    color:var(--neon);
+    margin-bottom:8px;
+}
+.role{
+    color:#9ff;
+    font-size:.9rem;
+    margin-bottom:12px;
+}
+.card p{
+    color:#bff;
+    font-size:.95rem;
+}
+
+/* CONTACT */
+.contact{
+    margin-top:15px;
+    font-size:.9rem;
+    color:#7ff;
+}
+
+/* FOOTER */
+footer{
+    padding:40px;
+    text-align:center;
+    border-top:1px solid rgba(0,255,255,.3);
+    color:#7ff;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>COORDINATORS</h1>
+    <p>MEET THE TEAM BEHIND TECHNOVA</p>
+</header>
+
+<section>
+<h2>Computer Engineering</h2>
+<div class="coordinators">
+    <div class="card">
+        <h3>Dr. A. Kumar</h3>
+        <div class="role">Faculty Coordinator</div>
+        <p>Guiding innovation in software systems and AI research.</p>
+        <div class="contact">📧 akumar@college.edu</div>
+    </div>
+    <div class="card">
+        <h3>Rahul S</h3>
+        <div class="role">Student Coordinator</div>
+        <p>Managing technical events and hackathon operations.</p>
+        <div class="contact">📞 +91 98765 43210</div>
+    </div>
+</div>
+</section>
+
+<section>
+<h2>Civil Engineering</h2>
+<div class="coordinators">
+    <div class="card">
+        <h3>Dr. P. Nair</h3>
+        <div class="role">Faculty Coordinator</div>
+        <p>Expert in sustainable infrastructure and smart cities.</p>
+        <div class="contact">📧 pnair@college.edu</div>
+    </div>
+    <div class="card">
+        <h3>Anjali R</h3>
+        <div class="role">Student Coordinator</div>
+        <p>Coordinating civil design challenges and workshops.</p>
+        <div class="contact">📞 +91 91234 56789</div>
+    </div>
+</div>
+</section>
+
+<section>
+<h2>Mechanical Engineering</h2>
+<div class="coordinators">
+    <div class="card">
+        <h3>Dr. M. Thomas</h3>
+        <div class="role">Faculty Coordinator</div>
+        <p>Leading mechanical innovation and robotics events.</p>
+        <div class="contact">📧 mthomas@college.edu</div>
+    </div>
+    <div class="card">
+        <h3>Arjun K</h3>
+        <div class="role">Student Coordinator</div>
+        <p>Overseeing mechanical design and automation contests.</p>
+        <div class="contact">📞 +91 99887 66554</div>
+    </div>
+</div>
+</section>
+
+<section>
+<h2>Electrical & Electronics Engineering</h2>
+<div class="coordinators">
+    <div class="card">
+        <h3>Dr. S. Iyer</h3>
+        <div class="role">Faculty Coordinator</div>
+        <p>Specialist in power systems and smart grid technologies.</p>
+        <div class="contact">📧 siyer@college.edu</div>
+    </div>
+    <div class="card">
+        <h3>Vishnu P</h3>
+        <div class="role">Student Coordinator</div>
+        <p>Managing electrical innovation challenges.</p>
+        <div class="contact">📞 +91 90909 12345</div>
+    </div>
+</div>
+</section>
+
+<section>
+<h2>Electronics & Communication Engineering</h2>
+<div class="coordinators">
+    <div class="card">
+        <h3>Dr. R. Menon</h3>
+        <div class="role">Faculty Coordinator</div>
+        <p>Researcher in VLSI, IoT, and communication systems.</p>
+        <div class="contact">📧 rmenon@college.edu</div>
+    </div>
+    <div class="card">
+        <h3>Sneha M</h3>
+        <div class="role">Student Coordinator</div>
+        <p>Handling embedded systems and communication events.</p>
+        <div class="contact">📞 +91 93456 78901</div>
+    </div>
+</div>
+</section>
+
+<footer>
+© 2026 TECHNOVA | ORGANIZED BY FUTURE ENGINEERS
+</footer>
+
+</body>
+</html>

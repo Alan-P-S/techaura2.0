@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TECHNOVA 2026 | FUTURE UNLEASHED</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;cursor:none}
+body{
+    font-family:Poppins,sans-serif;
+    background:#000;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* LOADING SCREEN */
+#loader{
+    position:fixed;
+    inset:0;
+    background:#000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+}
+#loader span{
+    font-family:Orbitron;
+    color:cyan;
+    font-size:1.5rem;
+    animation:pulse 1s infinite alternate;
+}
+@keyframes pulse{
+    from{opacity:0.3}
+    to{opacity:1}
+}
+
+/* CURSOR */
+.cursor{
+    position:fixed;
+    width:22px;height:22px;
+    border:2px solid cyan;
+    border-radius:50%;
+    pointer-events:none;
+    transform:translate(-50%,-50%);
+    z-index:999;
+}
+.cursor::after{
+    content:"";
+    width:6px;height:6px;
+    background:cyan;
+    border-radius:50%;
+    position:absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+}
+
+/* GRID */
+body::before{
+    content:"";
+    position:fixed;
+    width:200%;
+    height:200%;
+    background:
+    linear-gradient(rgba(0,255,255,0.06) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,255,255,0.06) 1px,transparent 1px);
+    background-size:60px 60px;
+    animation:grid 25s linear infinite;
+    z-index:-1;
+}
+@keyframes grid{
+    to{transform:translate(-60px,-60px)}
+}
+
+/* HERO */
+header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    perspective:1200px;
+    text-align:center;
+}
+
+/* HOLOGRAM CORE */
+.core{
+    width:120px;height:120px;
+    border:2px solid cyan;
+    border-radius:50%;
+    box-shadow:0 0 40px cyan;
+    animation:spin 8s linear infinite;
+    margin-bottom:40px;
+}
+@keyframes spin{
+    to{transform:rotateY(360deg) rotateX(360deg)}
+}
+
+/* GLITCH TEXT */
+.glitch{
+    font-family:Orbitron;
+    font-size:4rem;
+    color:cyan;
+    text-shadow:0 0 30px cyan;
+    position:relative;
+}
+.glitch::before,.glitch::after{
+    content:attr(data-text);
+    position:absolute;
+    left:0;
+}
+.glitch::before{
+    top:-2px;color:#f0f;
+    animation:glitch 2s infinite;
+}
+.glitch::after{
+    top:2px;color:#0ff;
+    animation:glitch 1.5s infinite;
+}
+@keyframes glitch{
+    0%{clip-path:inset(0 0 80% 0)}
+    50%{clip-path:inset(40% 0 40% 0)}
+    100%{clip-path:inset(80% 0 0 0)}
+}
+
+.subtitle{margin:20px;color:#9ff;height:30px}
+
+/* COUNTDOWN */
+.timer{
+    display:flex;
+    gap:20px;
+    margin-top:30px;
+}
+.time-box{
+    border:1px solid cyan;
+    padding:15px 20px;
+    text-align:center;
+    box-shadow:0 0 20px cyan;
+}
+.time-box span{
+    font-family:Orbitron;
+    font-size:1.5rem;
+}
+
+/* BUTTON */
+.btn{
+    margin-top:40px;
+    padding:16px 45px;
+    border:2px solid cyan;
+    background:transparent;
+    color:cyan;
+    letter-spacing:2px;
+    box-shadow:0 0 25px cyan;
+    transition:.3s;
+}
+.btn:hover{
+    background:cyan;
+    color:#000;
+    box-shadow:0 0 60px cyan;
+}
+
+/* SECTIONS */
+section{padding:100px 10%}
+h2{
+    font-family:Orbitron;
+    text-align:center;
+    color:cyan;
+    margin-bottom:50px;
+}
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+.card{
+    background:rgba(0,255,255,0.05);
+    border:1px solid rgba(0,255,255,0.3);
+    padding:30px;
+    border-radius:15px;
+    backdrop-filter:blur(12px);
+    opacity:0;
+    transform:translateY(40px);
+    transition:.7s;
+}
+.card.show{opacity:1;transform:none}
+.card:hover{box-shadow:0 0 40px cyan}
+.card h3{font-family:Orbitron;color:cyan}
+
+/* PARTICLES */
+.particle{
+    position:fixed;
+    width:3px;height:3px;
+    background:cyan;
+    border-radius:50%;
+    animation:float linear infinite;
+}
+@keyframes float{
+    from{transform:translateY(100vh)}
+    to{transform:translateY(-10vh)}
+}
+
+/* FOOTER */
+footer{
+    padding:30px;
+    text-align:center;
+    border-top:1px solid rgba(0,255,255,0.3);
+    color:#7ff;
+}
+</style>
+</head>
+
+<body>
+
+<div id="loader"><span>INITIALIZING FUTURE...</span></div>
+<div class="cursor"></div>
+
+<header id="hero">
+    <div class="core"></div>
+    <h1 class="glitch" data-text="TECHNOVA 2026">TECHNOVA 2026</h1>
+    <div class="subtitle" id="typing"></div>
+
+    <div class="timer">
+        <div class="time-box"><span id="d">00</span><br>DAYS</div>
+        <div class="time-box"><span id="h">00</span><br>HRS</div>
+        <div class="time-box"><span id="m">00</span><br>MIN</div>
+        <div class="time-box"><span id="s">00</span><br>SEC</div>
+    </div>
+
+    <button class="btn" id="btn">ENTER THE FUTURE</button>
+</header>
+
+<section>
+<h2>EVENT DOMAINS</h2>
+<div class="cards">
+    <div class="card"><h3>AI & Robotics</h3><p>Intelligent machines of tomorrow.</p></div>
+    <div class="card"><h3>Cyber Security</h3><p>Hack • Defend • Secure</p></div>
+    <div class="card"><h3>Game Development</h3><p>Next-gen immersive worlds.</p></div>
+    <div class="card"><h3>Hackathon</h3><p>24-hour innovation battle.</p></div>
+</div>
+</section>
+
+<footer>
+© 2026 TECHNOVA | ENGINEERED FOR THE FUTURE
+</footer>
+
+<script>
+// LOADER
+window.onload=()=>setTimeout(()=>loader.style.display="none",1500)
+
+// CURSOR
+const cursor=document.querySelector(".cursor");
+document.addEventListener("mousemove",e=>{
+    cursor.style.left=e.clientX+"px";
+    cursor.style.top=e.clientY+"px";
+});
+
+// PARALLAX
+document.addEventListener("mousemove",e=>{
+    hero.style.transform=`rotateY(${e.clientX/60}deg) rotateX(${-e.clientY/60}deg)`
+});
+
+// TYPING
+const text="Innovate • Code • Create • Dominate";
+let i=0;
+(function type(){
+    if(i<text.length){
+        typing.innerHTML+=text[i++];
+        setTimeout(type,80);
+    }
+})();
+
+// COUNTDOWN
+const festDate=new Date("2026-02-20T00:00:00");
+setInterval(()=>{
+    const now=new Date();
+    const diff=festDate-now;
+    d.innerText=Math.floor(diff/86400000);
+    h.innerText=Math.floor(diff/3600000)%24;
+    m.innerText=Math.floor(diff/60000)%60;
+    s.innerText=Math.floor(diff/1000)%60;
+},1000);
+
+// PARTICLES
+for(let i=0;i<80;i++){
+    let p=document.createElement("div");
+    p.className="particle";
+    p.style.left=Math.random()*100+"vw";
+    p.style.animationDuration=5+Math.random()*10+"s";
+    document.body.appendChild(p);
+}
+
+// SCROLL REVEAL
+const cards=document.querySelectorAll(".card");
+window.addEventListener("scroll",()=>{
+    cards.forEach(c=>{
+        if(c.getBoundingClientRect().top<window.innerHeight-50)
+            c.classList.add("show");
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TECHNOVA 2026 | Tech Fest</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --neon:#00ffff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    font-family:Poppins,sans-serif;
+    background:radial-gradient(circle at top,#0f2027,#000);
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* GRID */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+      linear-gradient(rgba(0,255,255,.05) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(0,255,255,.05) 1px,transparent 1px);
+    background-size:60px 60px;
+    animation:grid 30s linear infinite;
+    z-index:-1;
+}
+@keyframes grid{to{transform:translate(-60px,-60px)}}
+
+/* NAV */
+nav{
+    position:fixed;
+    top:0;left:0;
+    width:100%;
+    padding:16px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter:blur(12px);
+    background:rgba(0,0,0,.55);
+    border-bottom:1px solid rgba(0,255,255,.3);
+    z-index:10;
+}
+nav h1{
+    font-family:Orbitron;
+    color:var(--neon);
+}
+.nav-links a{
+    margin-left:25px;
+    color:#9ff;
+    text-decoration:none;
+    position:relative;
+}
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;bottom:-6px;
+    width:0;height:2px;
+    background:var(--neon);
+    transition:.3s;
+}
+.nav-links a:hover::after{width:100%}
+
+/* HERO */
+header{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 10%;
+}
+.title{
+    font-family:Orbitron;
+    font-size:clamp(2.5rem,6vw,4rem);
+    color:var(--neon);
+    text-shadow:0 0 25px var(--neon);
+}
+.subtitle{
+    margin-top:18px;
+    color:#9ff;
+    min-height:28px;
+}
+.btn{
+    margin-top:40px;
+    padding:15px 45px;
+    border:2px solid var(--neon);
+    background:transparent;
+    color:var(--neon);
+    letter-spacing:2px;
+    cursor:pointer;
+    box-shadow:0 0 20px rgba(0,255,255,.6);
+    transition:.3s;
+}
+.btn:hover{
+    background:var(--neon);
+    color:#000;
+}
+
+/* SECTIONS */
+section{
+    padding:120px 8%;
+}
+h2{
+    font-family:Orbitron;
+    text-align:center;
+    color:var(--neon);
+    margin-bottom:60px;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:35px;
+}
+.card{
+    background:rgba(0,255,255,.05);
+    border:1px solid rgba(0,255,255,.35);
+    border-radius:18px;
+    padding:30px;
+    backdrop-filter:blur(14px);
+    box-shadow:0 0 20px rgba(0,255,255,.3);
+    transform:translateY(40px);
+    opacity:0;
+    transition:.6s;
+}
+.card.show{
+    transform:none;
+    opacity:1;
+}
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 0 45px var(--neon);
+}
+.card h3{
+    font-family:Orbitron;
+    color:var(--neon);
+    margin-bottom:12px;
+}
+.card p{
+    color:#bff;
+    margin-bottom:25px;
+    line-height:1.5;
+}
+
+/* DEPARTMENT BUTTON */
+.card .dept-btn{
+    padding:10px 28px;
+    border:2px solid var(--neon);
+    background:transparent;
+    color:var(--neon);
+    letter-spacing:1px;
+    cursor:pointer;
+    transition:.3s;
+}
+.card .dept-btn:hover{
+    background:var(--neon);
+    color:#000;
+}
+
+/* FOOTER */
+footer{
+    padding:40px;
+    text-align:center;
+    border-top:1px solid rgba(0,255,255,.3);
+    color:#7ff;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    header{height:90vh}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>TECHNOVA</h1>
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#departments">Departments</a>
+        <a href="events.html">Events</a>
+    </div>
+</nav>
+
+<header id="home">
+    <div>
+        <div class="title">TECHNOVA 2026</div>
+        <div class="subtitle" id="typing"></div>
+        <a href="events.html"><button class="btn">ENTER THE FUTURE</button></a>
+    </div>
+</header>
+
+<section id="departments">
+<h2>DEPARTMENTS</h2>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>Computer Engineering</h3>
+        <p>
+            Where algorithms meet innovation.  
+            Explore AI, software systems, cybersecurity, data science, and next-gen computing.
+        </p>
+        <a href="computer-events.html"><button class="dept-btn">VIEW EVENTS</button></a>
+    </div>
+
+    <div class="card">
+        <h3>Civil Engineering</h3>
+        <p>
+            Designing the future of infrastructure.  
+            Experience smart cities, sustainable construction, and structural excellence.
+        </p>
+        <a href="civil-events.html"><button class="dept-btn">VIEW EVENTS</button></a>
+    </div>
+
+    <div class="card">
+        <h3>Mechanical Engineering</h3>
+        <p>
+            Powering motion and machines.  
+            Dive into robotics, automation, manufacturing, and advanced mechanical systems.
+        </p>
+        <a href="mechanical-events.html"><button class="dept-btn">VIEW EVENTS</button></a>
+    </div>
+
+    <div class="card">
+        <h3>Electrical & Electronics Engineering</h3>
+        <p>
+            Engineering energy and control.  
+            Discover power systems, smart grids, automation, and renewable technologies.
+        </p>
+        <a href="eee-events.html"><button class="dept-btn">VIEW EVENTS</button></a>
+    </div>
+
+    <div class="card">
+        <h3>Electronics & Communication Engineering</h3>
+        <p>
+            Connecting the digital world.  
+            Explore IoT, embedded systems, VLSI, communication networks, and signal processing.
+        </p>
+        <a href="ece-events.html"><button class="dept-btn">VIEW EVENTS</button></a>
+    </div>
+
+</div>
+</section>
+
+<footer>
+© 2026 TECHNOVA | FUTURE ENGINEERED
+</footer>
+
+<script>
+/* TYPING EFFECT */
+const text="Innovate • Engineer • Create • Lead";
+let i=0;
+(function type(){
+    if(i<text.length){
+        typing.innerHTML+=text[i++];
+        setTimeout(type,80);
+    }
+})();
+
+/* SCROLL REVEAL */
+const cards=document.querySelectorAll(".card");
+window.addEventListener("scroll",()=>{
+    cards.forEach(c=>{
+        if(c.getBoundingClientRect().top<innerHeight-60)
+            c.classList.add("show");
+    });
+});
+</script>
+
+</body>
+</html>
