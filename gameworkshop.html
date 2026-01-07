@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TECHNOVA | Event Details</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{ --neon:#00ffff; }
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:Poppins,sans-serif;
+    background:radial-gradient(circle at top,#0f2027,#000);
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* GRID */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+      linear-gradient(rgba(0,255,255,.05) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(0,255,255,.05) 1px,transparent 1px);
+    background-size:60px 60px;
+    animation:grid 30s linear infinite;
+    z-index:-1;
+}
+@keyframes grid{to{transform:translate(-60px,-60px)}}
+
+/* CONTAINER */
+.container{
+    max-width:1100px;
+    margin:120px auto 80px;
+    padding:0 20px;
+}
+
+/* HEADER */
+.event-header{
+    display:grid;
+    grid-template-columns:1fr 1.3fr;
+    gap:40px;
+}
+.poster{
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 0 30px rgba(0,255,255,.4);
+}
+.poster img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.info h1{
+    font-family:Orbitron;
+    color:var(--neon);
+    text-shadow:0 0 20px var(--neon);
+}
+.tag{
+    margin:12px 0;
+    color:#9ff;
+    font-size:.95rem;
+}
+.meta{
+    margin:15px 0;
+    line-height:1.8;
+    color:#bff;
+}
+.btn{
+    margin-top:20px;
+    padding:14px 40px;
+    border:2px solid var(--neon);
+    background:transparent;
+    color:var(--neon);
+    letter-spacing:2px;
+    cursor:pointer;
+    box-shadow:0 0 20px rgba(0,255,255,.6);
+}
+.btn:hover{
+    background:var(--neon);
+    color:#000;
+}
+
+/* SECTIONS */
+.section{
+    margin-top:60px;
+    background:rgba(0,255,255,.05);
+    border:1px solid rgba(0,255,255,.35);
+    border-radius:18px;
+    padding:30px;
+    backdrop-filter:blur(14px);
+    box-shadow:0 0 20px rgba(0,255,255,.3);
+}
+.section h2{
+    font-family:Orbitron;
+    color:var(--neon);
+    margin-bottom:15px;
+}
+.section ul{
+    padding-left:20px;
+}
+.section li{
+    margin-bottom:8px;
+    color:#bff;
+}
+
+/* COORDINATORS */
+.coordinators{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+}
+.coord{
+    background:#050505;
+    padding:20px;
+    border-radius:14px;
+    border:1px solid rgba(0,255,255,.35);
+}
+.coord strong{
+    color:var(--neon);
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px;
+    border-top:1px solid rgba(0,255,255,.3);
+    color:#7ff;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .event-header{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- EVENT HEADER -->
+<div class="event-header">
+    <div class="poster">
+        <img src="posters/gamedevworkshop2.jpg" alt="Event Poster">
+    </div>
+
+    <div class="info">
+        <h1>2D Multiplayer Game Workshop</h1>
+        <div class="tag">Computer Engineering | TECHNOVA 2026</div>
+
+        <div class="meta">
+            📅 <strong>Date:</strong> 21 February 2026<br>
+            ⏰ <strong>Time:</strong> 10:00 AM – 1:00 PM<br>
+            📍 <strong>Venue:</strong> Computer Lab – 1<br>
+            👥 <strong>Team Size:</strong> Individual / Team of 2
+        </div>
+
+        <button class="btn">REGISTER NOW</button>
+    </div>
+</div>
+
+<!-- DESCRIPTION -->
+<div class="section">
+    <h2>About the Event</h2>
+    <p>
+        CodeStorm is a high-intensity competitive programming contest designed to test
+        participants’ problem-solving skills, logical thinking, and coding efficiency.
+        The contest includes multiple rounds with increasing difficulty levels.
+    </p>
+</div>
+
+<!-- RULES -->
+<div class="section">
+    <h2>Rules & Guidelines</h2>
+    <ul>
+        <li>Participants must bring their college ID.</li>
+        <li>Use of internet is strictly prohibited during the contest.</li>
+        <li>Any form of plagiarism will result in disqualification.</li>
+        <li>Judges’ decision will be final.</li>
+    </ul>
+</div>
+
+<!-- COORDINATORS -->
+<div class="section">
+    <h2>Event Coordinators</h2>
+    <div class="coordinators">
+        <div class="coord">
+            <strong>Rahul S</strong><br>
+            Student Coordinator<br>
+            📞 98765 43210
+        </div>
+        <div class="coord">
+            <strong>Dr. A. Kumar</strong><br>
+            Faculty Coordinator<br>
+            📧 akumar@college.edu
+        </div>
+    </div>
+</div>
+
+</div>
+
+<footer>
+© 2026 TECH AURA 2.0 | EVENT MANAGEMENT SYSTEM
+</footer>
+
+</body>
+</html>
