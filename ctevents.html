@@ -47,7 +47,7 @@
         header {
             padding: 90px 10% 40px;
             text-align: center;
-            
+
         }
 
         header h1 {
@@ -72,6 +72,8 @@
 
         /* CARD */
         .card {
+            display: flex;
+            flex-direction: column;
             background: rgba(0, 255, 255, 0.05);
             border: 1px solid rgba(0, 255, 255, 0.35);
             border-radius: 18px;
@@ -81,6 +83,7 @@
             transform: translateY(40px);
             opacity: 0;
             transition: .6s;
+
         }
 
         .card.show {
@@ -172,6 +175,7 @@
 
         /* BUTTON */
         .btn {
+
             padding: 12px 32px;
             border: 2px solid #00ffff;
             background: transparent;
@@ -180,6 +184,7 @@
             cursor: pointer;
             box-shadow: 0 0 20px rgba(0, 255, 255, .6);
             animation: pulse 2s infinite;
+
         }
 
         @keyframes pulse {
@@ -270,7 +275,8 @@
             <div class="content">
                 <h3>2D Multiplayer Game Workshop</h3>
                 <div class="meta">📅 15 JAN | REG FEE : 300RS</div>
-                <p>Build, play, and compete as you learn to create a real-time 2D multiplayer game from scratch in this hands-on game development workshop. 🎮🚀</p>
+                <p>Build, play, and compete as you learn to create a real-time 2D multiplayer game from scratch in this
+                    hands-on game development workshop. 🎮🚀</p>
                 <a href="gameworkshop.html"><button class="btn">Explore</button></a>
             </div>
         </div>
@@ -305,26 +311,27 @@
         <div class="card">
             <div class="poster">
                 <!-- <div class="badge">COMING</div> -->
-                <img src="posters/paper.jpg"> 
+                <img src="posters/paper.jpg">
             </div>
             <div class="content">
                 <h3>Paper Presentation</h3>
                 <div class="meta">📅 15 JAN | REG FEE: 300Rs</div>
-                <p>Present your innovative ideas, showcase your research skills, and impress the audience in the Paper Presentation Competition.
-</p>
+                <p>Present your innovative ideas, showcase your research skills, and impress the audience in the Paper
+                    Presentation Competition.
+                </p>
                 <a href="paper.html"><button class="btn">Explore</button></a>
             </div>
         </div>
         <div class="card">
             <div class="poster">
                 <!-- <div class="badge">COMING</div> -->
-                 <img src="posters/mobilephotograpy.jpg">
+                <img src="posters/mobilephotograpy.jpg">
             </div>
             <div class="content">
                 <h3>PHOTOGRAPHY Competition</h3>
                 <div class="meta">📅 16 JAN | REG FEE: 50Rs</div>
                 <p>Capture the moment, tell a story, and let your lens speak in the Photography Competition. 📸✨
-</p>
+                </p>
                 <a href="photography.html"><button class="btn">Explore</button></a>
             </div>
         </div>
@@ -332,7 +339,7 @@
         <div class="card">
             <div class="poster">
                 <!-- <div class="badge">COMING</div> -->
-                 <img src="posters/lanparty.jpg"> 
+                <img src="posters/lanparty2d.jpg">
             </div>
             <div class="content">
                 <h3>LAN PARTY</h3>
@@ -340,7 +347,7 @@
                 <p>Experience an intense 3D FPS multiplayer game built using the Godot Game Engine.
 
 
-</p>
+                </p>
                 <a href="lanparty.html"><button class="btn">Explore</button></a>
             </div>
         </div>
@@ -352,7 +359,8 @@
             <div class="content">
                 <h3>FAST TYPING</h3>
                 <div class="meta">📅 16 JAN | REG FEE: 50Rs</div>
-                <p>Race against the clock and prove your speed and accuracy in the thrilling Speed Typing Competition. ⌨️⚡</p>
+                <p>Race against the clock and prove your speed and accuracy in the thrilling Speed Typing Competition.
+                    ⌨️⚡</p>
                 <a href="speedtype.html"><button class="btn">Explore</button></a>
             </div>
         </div>
@@ -383,7 +391,7 @@
         <div class="card">
             <div class="poster">
                 <div class="badge">COMING</div>
-                 <img src="posters/HACK AND SEEK.jpg"> 
+                <img src="posters/HACK AND SEEK.jpg">
             </div>
             <div class="content">
                 <h3>HACK AND SEEK</h3>
@@ -395,7 +403,7 @@
         <div class="card">
             <div class="poster">
                 <!-- <div class="badge">COMING</div> -->
-                 <img src="posters/digital painting.jpg"> 
+                <img src="posters/digital painting.jpg">
             </div>
             <div class="content">
                 <h3>Digital Painting</h3>
@@ -407,7 +415,7 @@
         <div class="card">
             <div class="poster">
                 <div class="badge">COMING</div>
-                <img src="posters/efootball.jpg"> 
+                <img src="posters/efootball.jpg">
             </div>
             <div class="content">
                 <h3>PES(E)FOOTBALL TOURNAMENT</h3>
@@ -437,12 +445,12 @@
                 <h3>BUG OFF! - CODING & DEBUGGING</h3>
                 <div class="meta">📅 16 JAN | REG FEE: 100Rs</div>
                 <p>Hunt down errors, squash the bugs, and prove your coding skills in **BUG OFF!** 💻🔥
-</p>
+                </p>
                 <a href="bugoff.html"><button class="btn">Explore</button></a>
             </div>
         </div>
 
-         <div class="card">
+        <div class="card">
             <div class="poster">
                 <!-- <div class="badge">COMING</div> -->
                 <img src="posters/celluloid.jpg">
@@ -451,12 +459,12 @@
                 <h3>CELLULOID</h3>
                 <div class="meta">📅 15,16 JAN | Ticket FEE: 10Rs</div>
                 <p>“Violence, violence, violence. I don’t like it. I avoid. But violence likes me—I can’t avoid .”
-</p>
+                </p>
                 <a href="celluloid.html"><button class="btn">Explore</button></a>
             </div>
         </div>
 
-         <div class="card">
+        <div class="card">
             <div class="poster">
                 <!-- <div class="badge">COMING</div> -->
                 <img src="posters/Balabalam.jpeg">
@@ -464,8 +472,9 @@
             <div class="content">
                 <h3>BALABALAM</h3>
                 <div class="meta">📅 16 JAN | Ticket FEE: 10Rs</div>
-                <p>Unleash the beast within and showcase your strength and skills in the ultimate Balabalam challenge! 💪🔥
-</p>
+                <p>Unleash the beast within and showcase your strength and skills in the ultimate Balabalam challenge!
+                    💪🔥
+                </p>
                 <a href="balabalam.html"><button class="btn">Explore</button></a>
             </div>
         </div>
