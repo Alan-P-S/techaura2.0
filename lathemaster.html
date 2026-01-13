@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TECHNOVA | Event Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --neon: #00ffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Poppins, sans-serif;
+            background: radial-gradient(circle at top, #0f2027, #000);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* GRID */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background:
+                linear-gradient(rgba(0, 255, 255, .05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, .05) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: grid 30s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes grid {
+            to {
+                transform: translate(-60px, -60px)
+            }
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1100px;
+            margin: 120px auto 80px;
+            padding: 0 20px;
+        }
+
+        /* HEADER */
+        .event-header {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 40px;
+        }
+
+        .poster {
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 255, 255, .4);
+        }
+
+        .poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .info h1 {
+            font-family: Orbitron;
+            color: var(--neon);
+            text-shadow: 0 0 20px var(--neon);
+        }
+
+        .tag {
+            margin: 12px 0;
+            color: #9ff;
+            font-size: .95rem;
+        }
+
+        .meta {
+            margin: 15px 0;
+            line-height: 1.8;
+            color: #bff;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 14px 40px;
+            border: 2px solid var(--neon);
+            background: transparent;
+            color: var(--neon);
+            letter-spacing: 2px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(0, 255, 255, .6);
+        }
+
+        .btn:hover {
+            background: var(--neon);
+            color: #000;
+        }
+
+        /* SECTIONS */
+        .section {
+            margin-top: 60px;
+            background: rgba(0, 255, 255, .05);
+            border: 1px solid rgba(0, 255, 255, .35);
+            border-radius: 18px;
+            padding: 30px;
+            backdrop-filter: blur(14px);
+            box-shadow: 0 0 20px rgba(0, 255, 255, .3);
+        }
+
+        .section h2 {
+            font-family: Orbitron;
+            color: var(--neon);
+            margin-bottom: 15px;
+        }
+
+        .section ul {
+            padding-left: 20px;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+            color: #bff;
+        }
+
+        /* COORDINATORS */
+        .coordinators {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .coord {
+            background: #050505;
+            padding: 20px;
+            border-radius: 14px;
+            border: 1px solid rgba(0, 255, 255, .35);
+        }
+
+        .coord strong {
+            color: var(--neon);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid rgba(0, 255, 255, .3);
+            color: #7ff;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:900px) {
+            .event-header {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- EVENT HEADER -->
+        <div class="event-header">
+            <div class="poster">
+                <img src="posters/lathemaster.jpeg" alt="Event Poster">
+            </div>
+
+            <div class="info">
+                <h1>RING THROW</h1>
+                <div class="tag">Mechanical Engineering | TECH AURA 2.0</div>
+
+                <div class="meta">
+                    📅 <strong>Date:</strong> 16 JAN 2026<br>
+                    ⏰ <strong>Time:</strong> 10:00 AM-12:00AM<br>
+                    📍 <strong>Venue:</strong> MECHANICAL WORKSHOP<br>
+                    👥 <strong>Team Size:</strong> Individual<br>
+                    💵 <strong>Registration</strong> 100 Rs
+                </div>
+
+                <a href="https://forms.gle/1mDAADXuehcoMEcN6"><button class="btn">REGISTER NOW</button></a>
+            </div>
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="section">
+            <h2>About the Event</h2>
+            <p>
+                A SKILL BASED COMPETITION FOCUSED ON MACHINING AND PRECISION USING A LATHE MACHINE.
+
+
+            </p>
+        </div>
+
+        <!-- RULES -->
+        <div class="section">
+            <h2>Rules & Guidelines</h2>
+            <ul>
+                <li>ONLY ONE MEMBER.</li>
+                <li>ALL MATERIALS ARE PROVIDED BY THE COLLEGE.</li>
+                <li>PARTICIPATION CERTIFICATE FOR ALL STUDENTS..</li>
+                <li>ELIGIBLE FOR ACTIVITY POINTS.</li>
+                <li>CASH PRIZES ARE AWARDED FOR 1st & 2nd.</li>
+                <li>DECISION OF JUDGES WILL BE FINALISED.</li>
+            </ul>
+        </div>
+
+        <!-- COORDINATORS -->
+        <div class="section">
+            <h2>Event Coordinators</h2>
+            <div class="coordinators">
+                <div class="coord">
+                    <strong>PRADHUL K P <strong><br>
+                            Student Coordinator<br>
+                            📞 9947289403
+                </div>
+                <!-- <div class="coord">
+            <strong>Dr. A. Kumar</strong><br>
+            Faculty Coordinator<br>
+            📧 akumar@college.edu
+        </div> -->
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 TECH AURA 2.0 | EVENT MANAGEMENT SYSTEM
+    </footer>
+
+</body>
+
+</html>
